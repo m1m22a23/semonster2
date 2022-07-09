@@ -9,15 +9,9 @@ public class Monster {
     this.Rare = RareNum;
   }
 
-  String summonMonster(int mNumber, int RareNum) {
+  String summonMonster(int mNumber) {
     String monsters[] = { "スライム", "ゴーレム", "ドラゴンボール", "イガキング" };
-    String evol_monsters[] = { "キングスライム", "マジーン", "神龍", "NEOイガキング" };
-    if (RareNum < 3) {
-      return monsters[mNumber];
-    } else {
-      return evol_monsters[mNumber];
-    }
-
+    return monsters[mNumber];
   }
 
   @Override
