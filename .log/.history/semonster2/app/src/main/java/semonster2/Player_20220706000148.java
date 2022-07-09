@@ -13,8 +13,8 @@ public class Player {
     this.monsters = new ArrayList<>();
     Random random = new Random();
     for (int i = 0; i <= 3; i++) {
-      this.monsters.add(new Monster(random.nextInt(4), random.nextInt(5))); // ランダム
-      // this.monsters.add(new Monster(0, 0)); // テスト用(スライム:レア度[0]のみ)
+      this.monsters.add(new Monster(random.nextInt(4), random.nextInt(5)));
+      // this.monsters.add(new Monster(0, 0));
     }
   }
 
@@ -23,7 +23,7 @@ public class Player {
     StringBuilder sb = new StringBuilder();
     sb.append("Deck:" + this.name + "\n");
     for (int i = 0; i < this.monsters.size(); i++) {
-      sb = sb.append(this.monsters.get(i).toString());
+      sb = sb.append(this.monsters.get(0).toString());
     }
     return sb.toString();
   }

@@ -3,8 +3,6 @@ package semonster2;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
-
 
 public class PlayerTest {
   // @Test
@@ -21,7 +19,7 @@ public class PlayerTest {
     // "スライム:レア度[0]¥n" +
     // "スライム:レア度[0]¥n" +
     // "スライム:レア度[0]¥n", player.toString());
-    // System.out.println(player.toString());
-    assertNotNull("not null player", player.toString());
+    //System.out.println(player.toString());
+    assertNotNull()
   }
 }
