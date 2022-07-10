@@ -6,9 +6,19 @@ package semonster2;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayInputStream;
+
 public class AppTest {
     @Test public void appHasAGreeting() {
         App classUnderTest = new App();
         assertEquals("こんにちは SEMonster", classUnderTest.getGreeting());
     }
+  @Test
+  public void testGetPlayerName() {
+    var userName = "test_user";
+    var testIn = new ByteArrayInputStream("test_user".getBytes());
+    System.setIn(testIn);
+
+    assertEquals(userName, App.getPlayerName(App.stdin));
+  }
 }

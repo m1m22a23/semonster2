@@ -6,6 +6,9 @@ package semonster2;
 public class App {
     public String getGreeting() {
         return "こんにちは SEMonster";
+  static String getPlayerName(Scanner scanner) {
+    return scanner.next();
+  }
     }
 
     public static void main(String[] args) {
