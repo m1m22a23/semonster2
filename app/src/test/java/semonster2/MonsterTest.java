@@ -8,12 +8,12 @@ public class MonsterTest {
   @Test
   public void monsterToString() {
     Monster monster = new Monster(0, 0);
-    assertEquals("スライム:レア度[0]¥n", monster.toString());
+    assertEquals("スライム:レア度[0]", monster.toString());
   }
 
   @Test
   public void evolMonsterToString() {
     Monster monster = new Monster(0, 3);
-    assertEquals("キングスライム:レア度[3]¥n", monster.toString());
+    assertEquals("キングスライム:レア度[3]", monster.toString());
   }
 }

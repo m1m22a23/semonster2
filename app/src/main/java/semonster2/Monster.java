@@ -22,6 +22,6 @@ public class Monster {
 
   @Override
   public String toString() {
-    return this.Name + ":レア度[" + this.Rare + "]¥n";
+    return this.Name + ":レア度[" + this.Rare + "]";
   }
 }

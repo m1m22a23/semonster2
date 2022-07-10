@@ -3,12 +3,38 @@
  */
 package semonster2;
 
+import java.util.LinkedList;
+import java.util.Scanner;
+import java.util.Random;
+
 public class App {
-    public String getGreeting() {
-        return "こんにちは SEMonster";
+  final static Random random = new Random();
+  final static Scanner stdin = new Scanner(System.in);
+  final static int maxRandomNumber = 4; // ランダムな数値の最大値(0～4)
+
+  public String getGreeting() {
+    return "こんにちは SEMonster";
+  }
+
+  static String getPlayerName(Scanner scanner) {
+    return scanner.next();
+  }
+
+  static LinkedList<Integer> getRandomList(int count) {
+    LinkedList<Integer> randNumList = new LinkedList<>();
+    for (int i = 0; i < count; i++) {
+      randNumList.add(random.nextInt(maxRandomNumber + 1));
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+    return randNumList;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(new App().getGreeting());
+    System.out.println("名前を入力してください");
+    var playerName = getPlayerName(stdin);
+
+    var game = new SeMonsterGame(getRandomList(10));
+    game.addPlayer(playerName);
+  }
 }
