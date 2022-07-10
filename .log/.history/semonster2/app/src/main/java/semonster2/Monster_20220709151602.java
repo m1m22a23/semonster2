@@ -15,7 +15,7 @@ public class Monster {
     if (RareNum < 3) {
       return monsters[mNumber];
     } else {
-      return evol_monsters[mNumber];
+
     }
 
   }

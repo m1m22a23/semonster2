@@ -14,6 +14,6 @@ public class MonsterTest {
   @Test
   public void evolMonsterToString() {
     Monster monster = new Monster(0, 3);
-    assertEquals("キングスライム:レア度[3]¥n", monster.toString());
+    assertEquals("スライム:レア度[0]¥n", monster.toString());
   }
 }
