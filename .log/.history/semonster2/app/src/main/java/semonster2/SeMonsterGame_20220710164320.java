@@ -22,8 +22,8 @@ public class SeMonsterGame {
    * @param playerName
    */
   void addPlayer(String playerName) {
-    Player player = new Player(playerName);
-    this.playerMap.put(playerName, player);
+    player = new Player(playerName);
+    this.playerMap.put(playerName, new Player(playerName));
     System.out.println(player);
   }
 

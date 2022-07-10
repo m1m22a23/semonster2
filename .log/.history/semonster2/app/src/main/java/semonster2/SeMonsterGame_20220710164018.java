@@ -22,9 +22,8 @@ public class SeMonsterGame {
    * @param playerName
    */
   void addPlayer(String playerName) {
-    Player player = new Player(playerName);
-    this.playerMap.put(playerName, player);
-    System.out.println(player);
+    this.playerMap.put(playerName, new Player(playerName));
+
   }
 
   // void draw(String playerName) {
