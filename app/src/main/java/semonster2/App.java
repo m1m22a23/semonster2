@@ -9,6 +9,13 @@ public class App {
   static String getPlayerName(Scanner scanner) {
     return scanner.next();
   }
+  static LinkedList<Integer> getRandomList(int count) {
+    LinkedList<Integer> randNumList = new LinkedList<>();
+    for (int i = 0; i < count; i++) {
+      randNumList.add(random.nextInt(maxRandomNumber + 1));
+    }
+
+    return randNumList;
     }
 
     public static void main(String[] args) {

@@ -13,6 +13,7 @@ public class AppTest {
         App classUnderTest = new App();
         assertEquals("こんにちは SEMonster", classUnderTest.getGreeting());
     }
+
   @Test
   public void testGetPlayerName() {
     var userName = "test_user";
@@ -20,5 +21,12 @@ public class AppTest {
     System.setIn(testIn);
 
     assertEquals(userName, App.getPlayerName(App.stdin));
+  }
+
+  @Test
+  public void testGetRandomList() {
+    var result = App.getRandomList(1);
+    assertNotNull(result);
+    assertEquals(1, result.size());
   }
 }
