@@ -23,7 +23,7 @@ public class Player {
     StringBuilder sb = new StringBuilder();
     sb.append("Deck:" + this.name + "\n");
     for (int i = 0; i < this.monsters.size(); i++) {
-      sb = sb.append(this.monsters.get(i).toString());
+      sb = sb.append(this.monsters.get(i).toString() + "\n");
     }
     return sb.toString();
   }
